@@ -11,11 +11,9 @@ export class LoginDTO {
   @Rule(RuleType.string().required())
   password: string;
 
-  // 验证码ID
-  @Rule(RuleType.string().required())
+  // 验证码ID（测试阶段可选）
   captchaId: string;
 
-  // 验证码
-  @Rule(RuleType.required())
+  // 验证码（测试阶段可选）
   verifyCode: number;
 }

@@ -16,6 +16,7 @@ import * as cron from '@midwayjs/cron';
 import * as DefaultConfig from './config/config.default';
 import * as LocalConfig from './config/config.local';
 import * as ProdConfig from './config/config.prod';
+import * as UnittestConfig from './config/config.unittest';
 import * as cool from '@cool-midway/core';
 import * as upload from '@midwayjs/upload';
 // import * as task from '@cool-midway/task';
@@ -45,7 +46,6 @@ import * as upload from '@midwayjs/upload';
     // task,
     {
       component: info,
-      enabledEnvironment: ['local', 'prod'],
     },
   ],
   importConfigs: [
@@ -53,6 +53,7 @@ import * as upload from '@midwayjs/upload';
       default: DefaultConfig,
       local: LocalConfig,
       prod: ProdConfig,
+      unittest: UnittestConfig,
     },
   ],
 })

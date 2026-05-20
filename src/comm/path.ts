@@ -8,9 +8,15 @@ import * as fs from 'fs';
  * @returns
  */
 const getKeys = () => {
-  const configFile = path.join(__dirname, '../config/config.default.js');
+  let configFile = path.join(__dirname, '../config/config.default.js');
+  if (!fs.existsSync(configFile)) {
+    configFile = path.join(__dirname, '../config/config.default.ts');
+  }
+  if (!fs.existsSync(configFile)) {
+    return '';
+  }
   const configContent = fs.readFileSync(configFile, 'utf8');
-  const keys = configContent.match(/keys: '([^']+)'/)?.[1];
+  const keys = configContent.match(/keys:\s*'([^']+)'/)?.[1];
   return keys;
 };
 

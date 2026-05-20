@@ -464,18 +464,6 @@
                 "keepAlive": true,
                 "isShow": true,
                 "childMenus": []
-            },
-            {
-                "name": "crud 示例",
-                "router": "/demo/crud",
-                "perms": null,
-                "type": 1,
-                "icon": "icon-favor",
-                "orderNum": 1,
-                "viewPath": "modules/demo/views/crud/index.vue",
-                "keepAlive": true,
-                "isShow": true,
-                "childMenus": []
             }
         ]
     },
@@ -511,7 +499,7 @@
         "type": 1,
         "icon": null,
         "orderNum": 0,
-        "viewPath": "modules/demo/views/home/index.vue",
+        "viewPath": null,
         "keepAlive": true,
         "isShow": false,
         "childMenus": []

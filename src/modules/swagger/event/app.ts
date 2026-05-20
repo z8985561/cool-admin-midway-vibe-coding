@@ -20,9 +20,11 @@ export class SwaggerAppEvent {
   @Event('onServerReady')
   async onServerReady() {
     this.swaggerBuilder.init().then(() => {
-      this.coreLogger.info(
-        '\x1B[36m [cool:module:swagger] midwayjs cool module swagger build success\x1B[0m'
-      );
+      if (this.coreLogger) {
+        this.coreLogger.info(
+          '\x1B[36m [cool:module:swagger] midwayjs cool module swagger build success\x1B[0m'
+        );
+      }
     });
   }
 }
