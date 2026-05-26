@@ -6,12 +6,10 @@ import { transformerJson } from '../../base/entity/base';
  * 用户余额表
  */
 @Entity('shop_wallet')
-@Unique(['userId'])
+@Unique('shop_wallet_userId_unique', ['userId'])
 export class ShopWalletEntity extends BaseEntity {
-  @Index()
   @Column({ comment: '用户ID' })
   userId: number;
-
   @Column({
     comment: '当前余额（单位：分）',
     type: 'bigint',

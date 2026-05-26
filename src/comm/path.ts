@@ -25,7 +25,10 @@ const getKeys = () => {
  * @returns
  */
 export const pDataPath = () => {
-  const dirPath = path.join(os.homedir(), '.cool-admin', md5(getKeys()));
+  // Docker 环境下使用 /app/data 作为数据目录
+  const isDocker = process.env.NODE_ENV === 'production' && process.env.MYSQL_HOST;
+  const baseDir = isDocker ? '/app/data' : path.join(os.homedir(), '.cool-admin', md5(getKeys()));
+  const dirPath = baseDir;
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }

@@ -5,8 +5,28 @@ import * as path from 'path';
 import { pCachePath, pUploadPath } from '../comm/path';
 import { availablePort } from '../comm/port';
 
-// redis缓存
-// import { redisStore } from 'cache-manager-ioredis-yet';
+// 判断是否在 Docker 环境中
+const isDocker = process.env.NODE_ENV === 'production' && !!process.env.MYSQL_HOST;
+
+// Docker 环境下使用环境变量获取数据库配置
+const dbConfig = {
+  type: 'mysql',
+  host: process.env.MYSQL_HOST || '127.0.0.1',
+  port: parseInt(process.env.MYSQL_PORT || '3306'),
+  username: process.env.MYSQL_USER || 'root',
+  password: process.env.MYSQL_PASSWORD || '123456',
+  database: process.env.MYSQL_DATABASE || 'cool',
+  // 自动建表 注意：线上部署的时候不要使用，有可能导致数据丢失
+  synchronize: isDocker,
+  // 打印日志
+  logging: false,
+  // 字符集
+  charset: 'utf8mb4',
+  // 是否开启缓存
+  cache: true,
+  // 实体路径
+  entities: ['**/modules/*/entity'],
+};
 
 export default {
   // 确保每个项目唯一，项目首次启动会自动生成
@@ -37,7 +57,7 @@ export default {
     fileSize: '200mb',
     whitelist: null,
   },
-  // 缓存 可切换成其他缓存如：redis http://www.midwayjs.org/docs/extensions/caching
+  // 缓存配置
   cacheManager: {
     clients: {
       default: {
@@ -49,20 +69,12 @@ export default {
       },
     },
   },
-  // cacheManager: {
-  //   clients: {
-  //     default: {
-  //       store: redisStore,
-  //       options: {
-  //         port: 6379,
-  //         host: '127.0.0.1',
-  //         password: '',
-  //         ttl: 0,
-  //         db: 0,
-  //       },
-  //     },
-  //   },
-  // },
+  // typeorm 配置
+  typeorm: {
+    dataSource: {
+      default: dbConfig,
+    },
+  },
   cool: {
     // 已经插件化，本地文件上传查看 plugin/config.ts，其他云存储查看对应插件的使用
     file: {},
@@ -87,5 +99,13 @@ export default {
       // 软删除
       softDelete: true,
     },
+    // 实体与路径，跟生成代码、前端请求、swagger文档相关 注意：线上不建议开启，以免暴露敏感信息
+    eps: !isDocker,
+    // 是否自动导入模块数据库
+    initDB: true,
+    // 判断是否初始化的方式
+    initJudge: 'db',
+    // 是否自动导入模块菜单
+    initMenu: true,
   } as CoolConfig,
 } as MidwayConfig;

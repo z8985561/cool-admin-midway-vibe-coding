@@ -19,3 +19,6 @@ launch.json
 data/*
 pnpm-lock.yaml
 public/uploads/*
+
+# AtomCode local-scope configs (machine-specific)
+.atomcode/local/
