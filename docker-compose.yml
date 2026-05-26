@@ -24,12 +24,11 @@ services:
     container_name: cool-redis
     restart: unless-stopped
     ports:
-      - "6380:6379"
+      - "6379:6379"
     environment:
       TZ: Asia/Shanghai
     volumes:
       - ./data/redis:/data
-      - ./data/mysql:/var/lib/mysql
     networks:
       - cool
 
