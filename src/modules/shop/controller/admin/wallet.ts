@@ -1,11 +1,21 @@
 import { CoolController, BaseController } from '@cool-midway/core';
 import { Body, Get, Inject, Post, Query } from '@midwayjs/core';
 import { ShopWalletService } from '../../service/wallet';
+import { ShopWalletEntity } from '../../entity/wallet';
 
 /**
  * 后台-余额管理
  */
-@CoolController()
+@CoolController({
+  api: ['add', 'delete', 'update', 'info', 'list', 'page'],
+  entity: ShopWalletEntity,
+  service: ShopWalletService,
+  pageQueryOp: {
+    keyWordLikeFields: ['b.name', 'b.username'],
+    fieldEq: [],
+    fieldLike: [],
+  },
+})
 export class AdminShopWalletController extends BaseController {
   @Inject()
   shopWalletService: ShopWalletService;

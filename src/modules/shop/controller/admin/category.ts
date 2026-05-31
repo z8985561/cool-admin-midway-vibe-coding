@@ -3,7 +3,7 @@ import { ShopCategoryEntity } from '../../entity/category';
 import { ShopCategoryService } from '../../service/category';
 
 @CoolController({
-  api: ['add', 'delete', 'update', 'info', 'page'],
+  api: ['add', 'delete', 'update', 'info', 'list', 'page'],
   entity: ShopCategoryEntity,
   service: ShopCategoryService,
 })
