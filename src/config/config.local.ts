@@ -39,10 +39,10 @@ export default {
     initJudge: 'db',
     // 是否自动导入模块菜单
     initMenu: true,
-    // Redis 配置（容器映射到 6380）
+    // Redis 配置
     redis: {
       host: '127.0.0.1',
-      port: 6380,
+      port: 6379,
       password: '',
       db: 0,
     },
