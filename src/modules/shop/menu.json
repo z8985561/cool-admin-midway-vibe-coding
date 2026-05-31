@@ -11,6 +11,18 @@
         "isShow": true,
         "childMenus": [
             {
+                "name": "数据概览",
+                "router": "/shop/dashboard",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-data",
+                "orderNum": 0,
+                "viewPath": "modules/shop/views/dashboard.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": []
+            },
+            {
                 "name": "商品管理",
                 "router": "/shop/goods",
                 "perms": null,
