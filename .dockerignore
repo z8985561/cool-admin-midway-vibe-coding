@@ -1,0 +1,14 @@
+node_modules
+dist
+data
+.git
+.gitignore
+.env
+.env.*
+*.md
+.vscode
+.idea
+.DS_Store
+jest.config.js
+coverage
+*.log

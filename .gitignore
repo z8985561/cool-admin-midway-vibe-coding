@@ -22,3 +22,7 @@ public/uploads/*
 
 # AtomCode local-scope configs (machine-specific)
 .atomcode/local/
+.atomcode/.setup.lock
+.atomcode/setup-state.json
+.atomcode/skills/
+.atomcode/graph.bin

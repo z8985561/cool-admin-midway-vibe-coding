@@ -1,0 +1,747 @@
+[
+    {
+        "name": "商城管理",
+        "router": "/shop",
+        "perms": null,
+        "type": 0,
+        "icon": "icon-shop",
+        "orderNum": 1,
+        "viewPath": null,
+        "keepAlive": true,
+        "isShow": true,
+        "childMenus": [
+            {
+                "name": "商品管理",
+                "router": "/shop/goods",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-goods",
+                "orderNum": 1,
+                "viewPath": "modules/shop/views/goods.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:goods:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:goods:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:goods:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:goods:page,shop:goods:list,shop:goods:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "分类管理",
+                "router": "/shop/category",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-list",
+                "orderNum": 2,
+                "viewPath": "modules/shop/views/category.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:category:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:category:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:category:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:category:page,shop:category:list,shop:category:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "品牌管理",
+                "router": "/shop/brand",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-tag",
+                "orderNum": 3,
+                "viewPath": "modules/shop/views/brand.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:brand:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:brand:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:brand:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:brand:page,shop:brand:list,shop:brand:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "订单管理",
+                "router": "/shop/order",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-file",
+                "orderNum": 4,
+                "viewPath": "modules/shop/views/order.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:order:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:order:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:order:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:order:page,shop:order:list,shop:order:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "购物车",
+                "router": "/shop/cart",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-cart",
+                "orderNum": 5,
+                "viewPath": "modules/shop/views/cart.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:cart:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:cart:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:cart:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:cart:page,shop:cart:list,shop:cart:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "优惠券管理",
+                "router": "/shop/coupon",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-ticket",
+                "orderNum": 6,
+                "viewPath": "modules/shop/views/coupon.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:coupon:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:coupon:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:coupon:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:coupon:page,shop:coupon:list,shop:coupon:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "支付记录",
+                "router": "/shop/pay-record",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-money",
+                "orderNum": 7,
+                "viewPath": "modules/shop/views/pay-record.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:payRecord:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:payRecord:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:payRecord:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:payRecord:page,shop:payRecord:list,shop:payRecord:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "退款管理",
+                "router": "/shop/refund",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-undo",
+                "orderNum": 8,
+                "viewPath": "modules/shop/views/refund.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:refund:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:refund:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:refund:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:refund:page,shop:refund:list,shop:refund:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "评价管理",
+                "router": "/shop/review",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-comment",
+                "orderNum": 9,
+                "viewPath": "modules/shop/views/review.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:review:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:review:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:review:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:review:page,shop:review:list,shop:review:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "地址管理",
+                "router": "/shop/address",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-address",
+                "orderNum": 10,
+                "viewPath": "modules/shop/views/address.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:address:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:address:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:address:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:address:page,shop:address:list,shop:address:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "余额管理",
+                "router": "/shop/wallet",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-wallet",
+                "orderNum": 11,
+                "viewPath": "modules/shop/views/wallet.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:wallet:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:wallet:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:wallet:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:wallet:page,shop:wallet:list,shop:wallet:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            },
+            {
+                "name": "余额日志",
+                "router": "/shop/wallet-log",
+                "perms": null,
+                "type": 1,
+                "icon": "icon-log",
+                "orderNum": 12,
+                "viewPath": "modules/shop/views/wallet-log.vue",
+                "keepAlive": true,
+                "isShow": true,
+                "childMenus": [
+                    {
+                        "name": "新增",
+                        "router": null,
+                        "perms": "shop:walletLog:add",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 1,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "删除",
+                        "router": null,
+                        "perms": "shop:walletLog:delete",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 2,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "修改",
+                        "router": null,
+                        "perms": "shop:walletLog:update",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 3,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    },
+                    {
+                        "name": "查询",
+                        "router": null,
+                        "perms": "shop:walletLog:page,shop:walletLog:list,shop:walletLog:info",
+                        "type": 2,
+                        "icon": null,
+                        "orderNum": 4,
+                        "viewPath": null,
+                        "keepAlive": false,
+                        "isShow": true,
+                        "childMenus": []
+                    }
+                ]
+            }
+        ]
+    }
+]

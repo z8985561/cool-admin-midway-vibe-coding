@@ -39,5 +39,12 @@ export default {
     initJudge: 'db',
     // 是否自动导入模块菜单
     initMenu: true,
+    // Redis 配置（容器映射到 6380）
+    redis: {
+      host: '127.0.0.1',
+      port: 6380,
+      password: '',
+      db: 0,
+    },
   } as CoolConfig,
 } as MidwayConfig;
