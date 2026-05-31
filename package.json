@@ -55,6 +55,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./bootstrap.js",
     "dev": "npx rimraf src/index.ts && npx cool check && cross-env NODE_ENV=local npx mwtsc --cleanOutDir --watch --run @midwayjs/mock/app.js --keepalive",
+    "dev:docker": "node scripts/dev-docker.mjs",
     "test": "cross-env NODE_ENV=unittest jest",
     "cov": "jest --coverage",
     "lint": "mwts check",
