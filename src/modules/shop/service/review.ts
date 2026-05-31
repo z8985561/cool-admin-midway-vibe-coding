@@ -36,24 +36,22 @@ export class ShopReviewService extends BaseService {
   /**
    * 评价列表
    */
-  async page(query: any, option: any) {
+  async page(query: any) {
     const where: any = {};
     if (query.info?.userId) {
       where.userId = Equal(query.info.userId);
     }
+    const pageNum = query.page || 1;
+    const pageSize = query.size || 20;
     const [list, total] = await this.reviewRepo.findAndCount({
       where,
       order: { createTime: 'DESC' },
-      skip: (query.current - 1) * query.pageSize,
-      take: query.pageSize,
+      skip: (pageNum - 1) * pageSize,
+      take: pageSize,
     });
     return {
       list,
-      pagination: {
-        page: query.current,
-        size: query.pageSize,
-        total,
-      },
+      pagination: { page: pageNum, size: pageSize, total },
     };
   }
 

@@ -50,10 +50,10 @@ export class AppShopReviewController extends BaseController {
   ) {
     return this.ok(
       await this.shopReviewService.page({
-        current: (page || 1) - 0,
-        pageSize: (pageSize || 10) - 0,
+        page: page || 1,
+        size: pageSize || 10,
         info: { userId: this.ctx.user.id },
-      }, {})
+      })
     );
   }
 
